@@ -1,0 +1,16 @@
+
+GET http://localhost:5058/api/categories
+
+###
+
+POST http://localhost:5058/api/categories
+Content-Type: application/json
+
+{
+    "name": "Laptop",
+    "description": "LAPTOP Condition valo na"
+}
+
+###
+
+DELETE http://localhost:5058/api/categories/677c6260-4d30-4f2f-a2ff-2848e24a3d5f
