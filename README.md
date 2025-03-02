@@ -68,18 +68,18 @@ Microsoft SQL Server (local or remote)
 Visual Studio or Visual Studio Code
 Installing
 Clone the repository:
-bash
-git clone https://github.com/yourusername/your-dotnet-api.git
+
+git clone https://github.com/Mahmudulmadu/Rest_API.git
 Navigate to the project directory:
-bash
+
 cd your-dotnet-api
 Install required packages:
-bash
+
 dotnet restore
 Set up your database connection:
 Open appsettings.json and configure the database connection string for your SQL Server.
 json
-Copy
+
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=yourserver;Database=yourdb;User Id=youruser;Password=yourpassword;"
@@ -91,17 +91,14 @@ Run the migrations (if using Entity Framework):
 
 Make sure that your AppDbContext is set up correctly, then run the following command to apply the migrations:
 
-bash
-
 dotnet ef database update
 Run the application:
-bash
+
 dotnet run
 Once the application starts, you can access the API at http://localhost:5000 (or whichever port you configured).
 
 API Endpoints
 1. Create Category
-bash
 POST /api/categories
 Request:
 json
@@ -119,7 +116,7 @@ json
     }
 }
 2. Get All Categories
-bash
+
 GET /api/categories
 Query Parameters:
 page: The page number (default is 1).
@@ -145,7 +142,7 @@ bash
 GET /api/categories/{id}
 Response:
 json
-Copy
+
 {
     "status": "success",
     "data": {
@@ -164,7 +161,7 @@ json
 }
 Response:
 json
-Copy
+C
 {
     "status": "success",
     "data": {
@@ -174,7 +171,7 @@ Copy
 }
 5. Delete Category
 bash
-Copy
+
 DELETE /api/categories/{id}
 Response:
 json
